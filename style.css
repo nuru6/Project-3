@@ -1,0 +1,566 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.active {
+    color: #8490FF !important;
+}
+
+a {
+    font-size: 14px;
+    color: #404040;
+    text-decoration: none;
+    display: inline-block;
+}
+
+p {
+    font-size: 14px;
+    color: #969696;
+    margin-bottom: 25px;
+    line-height: 25px;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 55px;
+    color: #222;
+    text-transform: uppercase;
+    margin: 25px 0;
+    letter-spacing: 0.1px;
+}
+
+h2 {
+    font-size: 35px;
+    color: #222;
+    margin: 25px 0;
+    letter-spacing: 0.1px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #222;
+    margin-top: 10px;
+}
+
+h4 {
+    font-size: 14px;
+    color: #222;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+/* Header Start */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    padding: 0 10%;
+    background: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header .nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .nav ul li {
+    padding-left: 40px;
+}
+
+header .nav ul li a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+header .nav ul li a:hover {
+    color: #8490FF;
+}
+
+/* Common Style */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+section .sectionTitle {
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+section .sectionTitle h2 {
+    margin: 10px 0;
+}
+
+section .img {
+    display: flex;
+    justify-content: center;
+}
+
+section .text {
+    margin: 25px 0;
+}
+
+section .text a {
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    background-color: #8490FF;
+}
+
+section .text a:hover {
+    box-shadow: 5px 5px 30px rgba(132, 144, 255, 0.5);
+    transition: all 0.1s ease-in;
+}
+
+/* Section 1 Start */
+.section1 {
+    background-color: #F9F9FF;
+    padding-top: 20px;
+}
+
+.section1 div {
+    width: 48%;
+}
+
+/* Section 2 Start */
+.section2 div {
+    width: 45%;
+}
+
+.section2 .text h2 {
+    text-transform: uppercase;
+}
+
+/* Section 3 Start */
+.section3 {
+    flex-direction: column;
+}
+
+.section3 .services {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.section3 .services .serviceBox {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section3 .services .serviceBox i {
+    font-size: 30px;
+    color: #707070;
+    padding-bottom: 10px;
+}
+
+.section3 .services .serviceBox a {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+}
+
+.section3 .services .serviceBox:hover i {
+    color: #8490FF;
+    transition: all ease-in .2s;
+}
+
+.section3 .services .serviceBox:hover a {
+    color: #8490FF;
+    transition: all .3s ease 0s;
+}
+
+/* Section 4 Start */
+.section4 {
+    background: linear-gradient(45deg, #8490FF, #5bbbff);
+    padding: 100px 10%;
+}
+
+.section4 .row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section4 .row .box {
+    width: 25%;
+}
+
+.section4 .row .box h2 {
+    font-size: 35px;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.section4 .row .box p {
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+/* Section 5 Start */
+.section5 {
+    display: block;
+}
+
+.section5 .filter ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section5 .filter ul li {
+    padding: 0 15px;
+    font-size: 14px;
+    color: #404040;
+    cursor: pointer;
+}
+
+.section5 .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    margin-top: 75px;
+}
+
+.section5 .portfolio>div {
+    width: 30%;
+    text-align: center;
+}
+
+.image-overlay {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #8490FF, #5bbbff);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-overlay:hover .overlay {
+    opacity: 0.75;
+}
+
+/* Section 6 Start */
+.section6 {
+    flex-direction: column;
+}
+
+.section6 .card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section6 .card .cardbox {
+    width: 25%;
+    text-align: center;
+    margin: 15px 0;
+    padding: 0 20px;
+    background-color: #F9F9FF;
+}
+
+.section6 .card .cardbox hr {
+    height: .1px;
+    border-width: 0;
+    color: rgba(150, 150, 150, 0.2);
+    background-color: rgba(150, 150, 150, 0.2);
+}
+
+.section6 .card .cardbox p {
+    margin: 15px 0;
+}
+
+.section6 .card .cardbox a {
+    text-transform: uppercase;
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.section6 .card .cardbox:hover {
+    background: #8490FF;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all .3s ease;
+}
+
+.section6 .card .cardbox:hover h2 {
+    color: white;
+}
+
+.section6 .card .cardbox:hover h3 {
+    color: white;
+}
+
+.section6 .card .cardbox:hover p {
+    color: white;
+}
+
+.section6 .card .cardbox:hover hr {
+    background-color: white;
+}
+
+/* Footer Start */
+footer {
+    background-color: #04091E;
+    width: 100%;
+    padding: 75px 10%;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .div1 {
+    width: 40%;
+}
+
+.footer .div2 {
+    width: 40%;
+}
+
+.footer .div3 {
+    width: 20%;
+}
+
+.footer>div {
+    padding: 0 20px;
+}
+
+.footer h3 {
+    color: white;
+    padding-bottom: 20px;
+}
+
+span {
+    color: #8490FF;
+}
+
+.footer .div2 .email {
+    width: 100%;
+    position: relative;
+}
+
+.footer .div2 .email input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 20%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer .div2 .email i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    color: white;
+    background-color: #8490FF;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.footer .div3 .icons i {
+    color: white;
+    padding: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer .div3 .icons i:hover {
+    color: #8490FF;
+}
+
+/* Responsive Design */
+#check {
+    display: none;
+}
+
+header .checkbtn i {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    color: #404040;
+}
+
+@media (max-width:992px) {
+    header .nav {
+        position: fixed;
+        left: -200%;
+        top: 65px;
+        width: 100%;
+        height: 100%;
+        background-color: #F9F9FF;
+        z-index: 1;
+        transition: all .1s;
+    }
+
+    #check:checked~.nav {
+        left: 0;
+    }
+
+    /* Header */
+    header .nav ul {
+        display: block;
+        margin: 30px 10%;
+    }
+
+    header .nav ul li {
+        padding: 15px 0;
+    }
+
+    header .nav ul li a {
+        font-size: 18px;
+    }
+
+    header .checkbtn i {
+        display: block;
+    }
+
+    section .text h1{
+        font-size:35px;
+    }
+
+    section .text h2{
+        font-size:25px;
+    }
+
+    /* Section 3 */
+    .section3 .services .serviceBox {
+        width: 50%;
+    }
+
+    /* Section 4 */
+    .section4 .row .box {
+        width: 50%;
+        margin: 20px 0;
+    }
+
+    /* Section 6 */
+    .section6 .card .cardbox {
+        width: 50%;
+    }
+
+    /* Footer */
+    .footer>div {
+        width: 50% !important;
+    }
+}
+
+@media (max-width:768px) {
+    /* Section 1 */
+    .section1 div {
+        width: 100%;
+    }
+
+    /* Section 2 */
+    .section2 div {
+        width: 100%;
+    }
+
+    /* Section 3 */
+    .section3 .services {
+        flex-direction: column;
+    }
+
+    .section3 .services .serviceBox {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* Section 4 */
+    .section4 .row .box {
+        width: 100%;
+    }
+
+    /* Section 6 */
+    .section6 .card .cardbox {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer>div {
+        width: 50% !important;
+    }
+}
+
+@media (max-width:576px) {
+    header {
+        padding: 0 3%;
+    }
+
+    section {
+        padding: 0 3%;
+    }
+
+    .section5 .portfolio>div {
+        width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        padding: 75px 3%;
+    }
+
+    .footer>div {
+        width: 100% !important;
+        margin: 15px 0;
+    }
+
+    .footer .div1 p:last-child {
+        margin: 0;
+    }
+}
